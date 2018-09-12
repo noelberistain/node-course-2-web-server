@@ -48,6 +48,13 @@ app.get('/about', (req, res) => {
     });
 });
 
+app.get('/contact',(req, res)=>{
+    res.render('contact.hbs',{
+        pageTitle: 'Contact Us',
+        message: 'Some form to get in touch'
+    });
+});
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage: 'Unable to handle request'
